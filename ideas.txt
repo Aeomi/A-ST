@@ -1,0 +1,4 @@
+-   Settings button that uses cookies (w/ cog icon)
+-   welcome music with low starting volume
+    -   can be toggled in settings menu
+    -   volume can be set in settings menu
