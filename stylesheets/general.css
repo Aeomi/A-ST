@@ -1,4 +1,9 @@
 
+
+#page-header {
+
+}
+
 #project-desc {
     color: rgba(250, 45, 125, 0.75);
 }
@@ -7,6 +12,54 @@
     color: rgba(250, 120, 125, 0.75);
 }
 
-#page-header {
-    background-image: linear-gradient(120deg, rgb(25,45,200), rgb(225,50,220));
+
+#settings-button {
+    background: url("../data/images/icon_settings_2.png") no-repeat center;
+
+    transition: opacity 250ms;
+    opacity:    0.25;
+
+    position:   absolute;
+    right:      16px;
+    top:        16px;
+    height:     46px;
+    width:      46px;
+}
+
+#settings-button:hover {
+    opacity: 0.85;
+}
+
+
+#stories-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.story {
+    background-color: pink;
+    border : 1px solid grey;
+
+    height: 256px;
+    width: 256px;
+
+    text-align: center;
+    margin: 16px;
+
+}
+
+
+
+
+
+/* Error Styling */
+.fatalError {
+    text-align: center;
+    margin-top: 50px;
+    color: rgb(205, 75, 75);
 }

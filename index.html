@@ -1,43 +1,61 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en-US">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title>A-ST | Home</title>
 
         <!-- Include Stylesheets -->
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
         <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="stylesheets/default.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="stylesheets/general.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="stylesheets/default.css"   media="screen">
+        <link rel="stylesheet" type="text/css" href="stylesheets/general.css"   media="screen">
 
         <!-- Site Font -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 
         <!-- Include Scrips -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        <script src="scripts/ast/loader.js"></script>
+        <script src="scripts/loader.js"></script>
 
     </head>
 
     <body>
 
-        <script src="scripts/ast/loader.js"></script>
-        <script src="scripts/ast/error.js"></script>
-        <script src="scripts/ast/startup.js"></script>
-        <script src="scripts/main.js"></script>
+        <!--|> Page Header <|-->
 
+        <!-- Header image -->
+        <div id="page-header">
 
-        <!-- Page Header -->
-        <section id="page-header">
+            <div id="settings-button"></div>
+
             <h1 id="project-name">A-ST</h1>
-            <h4 id="project-desc">Story time for kitten ♥</h4>
-            <h6 id="project-desc2">- and perhaps Light ♥</h6>
-            <br/>
-            <a class="button">Settings</a>
-            <a class="button">Settings</a>
+            <h4 id="project-desc">Story time</h4>
+            <h6 id="project-desc2">♥</h6>
+        </div>
 
-        </section>
+
+        <!-- Settings button -->
+        <div id="settings-menu">
+        </div>
+
+
+
+
+        <!--|> Page Content <|-->
+        <div id="stories-container">
+
+            <!-- Insert generated divs into here and sort them via flex -->
+
+            <div id="mog"           class="story">Mog's Family of Cats</div>
+            <div id="goodnightMoon" class="story">Goodnight Moon</div>
+            <div id="goodnightMoon" class="story">Test Story</div>
+            <div id="goodnightMoon" class="story">Hello? Moon</div>
+
+        </div>
+
 
 
 

@@ -2,7 +2,7 @@ AST.startup = {};
 
 // Make sure JQuery is working
 AST.startup.checkJQuery = function() {
-    window.jQuery || AST.error.fatal("JQuery failed to download!");
+    (window.jQuery) || AST.error.fatal("JQuery failed to download");
 };
 
 

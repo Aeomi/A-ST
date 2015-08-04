@@ -1,0 +1,67 @@
+30FPS [
+	
+	2.46s:
+		Idle:   95.53%
+		Active:	4.471%
+	
+	27.95s:
+		Idle:	95.85%
+		Active:	4.153%
+		
+	96.s:
+		Idle:	93.75%
+		Active:	6.250%
+	
+]
+
+
+60FPS [
+
+	2.84s:
+		Idle:   89.08%
+		Active:	10.92%
+
+	31.88s:
+		Idle:   92.53%
+		Active:	7.474%
+
+	55.06s:
+		Idle:   90.81%
+		Active: 9.190%
+]
+
+
+Compare [
+	
+	1:{
+		Factor 		= (2.84 : 2.46) 					= 1.15447154
+		Threshhold 	= (10.92 : 4.471 * F(5.16164226))	= 2.11560574
+		
+		Result		= 211.56% Slower (11.56% slower than expected)
+	}
+	
+	2:{
+		Factor 		= (31.88 : 27.95)					= 1.14060823
+		Threshhold 	= (7.474 : 4.153 * F(4.73808659))	= 1.57743001	
+		
+		Result		= 157.74% Slower (42.26% faster than expected)
+	}	
+	
+	
+	3:{
+		Factor		= (55.06 : 96.)						= 0.57354167
+		Threshhold	= (9.190 : 6.250 * F(3.58463542)	= 2.56371958
+		
+		Result		= 256.37% Slower (56.37% slower than expected)
+	}
+	
+	- Net-performance decrease: 8.56%
+	
+	- Expected performance decrease: 200.00%
+	- Actual performance decrease:	 208.56%
+]
+	
+	
+	
+	
+	
