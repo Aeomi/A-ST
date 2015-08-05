@@ -1,12 +1,20 @@
-window.AST = {
-    nodes : [
-        "ast/animation.js",
-        "ast/error.js",
-        "ast/startup.js",
-        "ast/story.js",
-        "main.js"
-    ]
-};
+console.log("Loaded: loader.js");
+
+window.AST = {};
+
+
+
+
+
+/*
+AST.nodes = [
+    "ast/error.js",
+    "ast/animation.js",
+    "ast/startup.js",
+    "ast/story.js",
+
+    "main.js"
+];
 
 AST.loadNode = function(path, callback) {
     var head = document.head;
@@ -29,3 +37,4 @@ for (var i in AST.nodes) {
     })
 
 };
+*/

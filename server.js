@@ -1,22 +1,24 @@
-'use strict';
 
-var http = require('http');
+var express = require("express");
+var app  = express();
 
+app.use(express.static(__dirname + "/public"));
+app.get('/', function(req, res) {
 
-var server = http.createServer(function(request, response) {
-    var method = request.method;
-    var url    = request.url;
+    console.log("An action was commited");
+    console.log("[Client/Request]> ("+ req.ip +") " + req.method);
 
-    response.writeHead(200, {
-        'content-type' : 'text/html'
-    });
-
-
-    response.write("Ello Wurld");
-    response.end();
 });
 
 
-server.listen(3000);
+app.listen(8080);
+console.log("[Server]> Listening on port 8080");
 
-??? ;3;
+
+var fs = require('fs');
+
+fs.readdir("data/stories/mog/", function(err, files) {
+    for (var file in files) {
+        console.log(files[file]);
+    }
+});

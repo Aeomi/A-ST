@@ -1,3 +1,5 @@
+console.log("Loaded: error.js");
+
 AST.error = {};
 
 AST.error.fatal = function(message) {

@@ -1,12 +1,16 @@
-/* make instances static, make anim a class and use:
+console.log("Loaded: animation.js");
+
+AST.anim = {
+    instances : {}
+};
+
+
+/* TODO: instances static, make anim a class and use:
     AST.anim.prototype.method_name = function(first_argument) {
         // body...
     };
 */
 
-AST.anim = {
-    instances : {}
-};
 
 AST.anim.registerAnim = function(id, anim) {
     AST.anim.instances[id] = anim;

@@ -1,3 +1,4 @@
+console.log("Loaded: startup.js");
 AST.startup = {};
 
 // Make sure JQuery is working
