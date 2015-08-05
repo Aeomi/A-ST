@@ -3,6 +3,7 @@ window.AST = {
         "ast/animation.js",
         "ast/error.js",
         "ast/startup.js",
+        "ast/story.js",
         "main.js"
     ]
 };
