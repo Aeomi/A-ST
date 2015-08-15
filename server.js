@@ -1,24 +1,52 @@
-
+// Setup ------------------------------------------------/
 var express = require("express");
+var morgan = require('morgan');
 var app  = express();
+// ------------------------------------------------/
 
+
+
+//----------------\
+// Config
+//----------------/
 app.use(express.static(__dirname + "/public"));
-app.get('/', function(req, res) {
+app.use(morgan('dev'));
 
-    console.log("An action was commited");
-    console.log("[Client/Request]> ("+ req.ip +") " + req.method);
+
+
+//----------------\
+// Load Externals
+//----------------/
+storyManager = require('./storyManager.js');
+
+
+
+//----------------\
+// Routes
+//----------------/
+
+// Get Story paths
+app.get('/api/receiveStoryPaths/', function(req, res) {
+	var storyPaths = storyManager.getStories();
+
+	res.send(storyPaths);
 
 });
 
 
+
+//----------------\
+// Application
+//----------------/
+app.get('*', function(req, res) {
+	// Maintain single file site regardless of URL requests
+	res.sendfile('./public/index.html');
+});
+
+
+
+//----------------\
+// Listen
+//----------------/
 app.listen(8080);
 console.log("[Server]> Listening on port 8080");
-
-
-var fs = require('fs');
-
-fs.readdir("data/stories/mog/", function(err, files) {
-    for (var file in files) {
-        console.log(files[file]);
-    }
-});

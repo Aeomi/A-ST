@@ -61,7 +61,3 @@ Compare [
 	- Actual performance decrease:	 208.56%
 ]
 	
-	
-	
-	
-	

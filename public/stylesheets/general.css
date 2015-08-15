@@ -14,21 +14,65 @@
 
 
 #settings-button {
-    background: url("../data/images/icon_settings_2.png") no-repeat center;
+    background: url("../data/images/icon_settings_3.png") no-repeat center;
 
+    /* Fade animation */
     transition: opacity 250ms;
     opacity:    0.25;
 
     position:   absolute;
     right:      16px;
     top:        16px;
-    height:     46px;
-    width:      46px;
+    height:     49px;
+    width:      49px;
 }
 
-#settings-button:hover {
-    opacity: 0.85;
+
+.shadow-line {
+    height:             12px;
+    border:             0px;
+    margin:             0px;
+    padding:            0px;
+
+    box-shadow:         inset 0 12px 16px -12px rgba(0, 0, 0, 0.7);
+    background-color:   rgba(255, 255, 255, 1);
 }
+
+
+#settings-button:hover {
+    /* Fade animation */
+    opacity:   0.85;
+
+    /* Rotate animation *
+    animation-name:             rotate1;
+    animation-duration:         0.75s;
+    animation-iteration-count:  1;
+    animation-timing-function:  cubic-bezier(0.5, 1, .25, 1);
+    */
+    /* Rotate animation */
+    animation-name:             rotate1;
+    animation-duration:         0.75s;
+    animation-iteration-count:  1;
+    animation-timing-function:  cubic-bezier(0.5, 1, .25, 1);
+}
+
+#settings-button:not(:hover) {
+    /* Rotate animation */
+    animation-name:             rotate2;
+    animation-duration:         0.75s;
+    animation-iteration-count:  1;
+    animation-timing-function:  cubic-bezier(0.5, 1, .25, 1);
+}
+
+@keyframes rotate1 {
+    from { transform:rotate(0deg);   }
+    to   { transform:rotate(135deg); }
+}
+@keyframes rotate2 {
+    from { transform:rotate(180deg);   }
+    to   { transform:rotate(0deg); }
+}
+
 
 
 #stories-container {
@@ -41,15 +85,14 @@
 }
 
 .story {
-    background-color:   pink;
-    border:             1px solid grey;
+    background-color:   rgba(225, 190, 225, 0.85);
+    border:             2px solid rgba(50, 50, 50, 0.05);
 
     height:             256px;
     width:              256px;
 
     padding:            6px;
-    margin:             16px;
-
+    margin:             32px;
 }
 
 

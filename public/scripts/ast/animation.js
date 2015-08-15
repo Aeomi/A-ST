@@ -15,7 +15,7 @@ AST.anim = {
 AST.anim.registerAnim = function(id, anim) {
     AST.anim.instances[id] = anim;
     return anim;
-}
+};
 
 AST.anim.debugAnim = function(id) {
 
@@ -26,15 +26,14 @@ AST.anim.debugAnim = function(id) {
     }
 
     console.log("\n");
-}
-
+};
 
 //************************************//
 
 
 
 // Animated gradient background-image of an element
-AST.anim.animateGradient = function(elm, startingAngle, frameRate) {
+AST.anim.animateGradient = function(elm, startingAngle, frameRate, backgroundColor, foregroundColor) {
 
     var anim = {
         ang : startingAngle,
@@ -45,12 +44,13 @@ AST.anim.animateGradient = function(elm, startingAngle, frameRate) {
         anim.ang = (anim.ang + 0.1) % 360;
 
         $(elm).css(
-            {'background-image' : "linear-gradient(" + anim.ang + "deg, rgb(25,45,200), rgb(225,50,220))"}
+            {'background-image' : "linear-gradient("+ anim.ang +"deg, "+ backgroundColor +", "+ foregroundColor +")"}
         );
 
+        // rgb(25,45,200)
+        // rgb(225,50,220)
 
-
-    }
+    };
 
     // Run animation function then register function according to its framerate
     anim.func();
@@ -58,4 +58,4 @@ AST.anim.animateGradient = function(elm, startingAngle, frameRate) {
 
     // Register animation object to the instances list
     AST.anim.registerAnim('headerImage', anim);
-}
+};
